@@ -13,6 +13,4 @@ export function middleware(req: NextRequest) {
 
   url.pathname = `/a${url.pathname}`;
   return NextResponse.rewrite(url);
-
-  // return undefined;
 }

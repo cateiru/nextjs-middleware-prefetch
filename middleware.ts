@@ -5,12 +5,14 @@ import type { NextRequest } from "next/server";
 export function middleware(req: NextRequest) {
   const url = req.nextUrl.clone();
 
-  // If the path is `/` we want to continue to the next middleware
-  if (url.pathname === "/") {
+  console.log(url.pathname);
+
+  if (url.pathname === "/" || url.pathname.startsWith("/_next")) {
     return NextResponse.next();
   }
 
-  // If the path is `/b` we want to redirect to `/a/b`
-  url.password = `/a${url.pathname}`;
+  url.pathname = `/a${url.pathname}`;
   return NextResponse.rewrite(url);
+
+  // return undefined;
 }

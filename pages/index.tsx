@@ -11,6 +11,9 @@ export default function Home() {
         <li>
           <Link href="/ssr">SSR</Link>
         </li>
+        <li>
+          <Link href="/empty">no SSG/SSR</Link>
+        </li>
       </ul>
     </>
   );

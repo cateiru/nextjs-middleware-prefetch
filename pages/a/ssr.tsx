@@ -11,7 +11,7 @@ export const getServerSideProps: GetServerSideProps<{
   return {
     props: {
       a: {
-        hoge: "hoge",
+        hoge: "ok!",
       },
     },
   };
@@ -22,7 +22,7 @@ const Page: React.FC<
 > = ({ a }) => {
   return (
     <>
-      <div>Foo</div>
+      <h2>Get ServerSide Props</h2>
       <div>{a.hoge}</div>
     </>
   );

@@ -3,8 +3,15 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div>Top</div>
-      <Link href="/foo">to foo</Link>
+      <h2>Top</h2>
+      <ul>
+        <li>
+          <Link href="/ssg">SSG</Link>
+        </li>
+        <li>
+          <Link href="/ssr">SSR</Link>
+        </li>
+      </ul>
     </>
   );
 }
